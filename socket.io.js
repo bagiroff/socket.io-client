@@ -7,7 +7,7 @@
  */
 
 var io = ('undefined' === typeof module ? {} : module.exports);
-(function() {
+(function(context) {
 
 /**
  * socket.io
@@ -23,7 +23,7 @@ var io = ('undefined' === typeof module ? {} : module.exports);
    * @namespace
    */
 
-  var io = exports;
+ io = exports;
 
   /**
    * Socket.IO version
@@ -3667,4 +3667,4 @@ var swfobject;
 if (typeof define === "function" && define.amd) {
   define([], function () { return io; });
 }
-})();
+})(this);
